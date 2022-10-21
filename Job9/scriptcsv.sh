@@ -4,7 +4,7 @@
 export IFS=','
 cat Shell_Userlist.csv | sed 1d Shell_Userlist.csv | sed -e 's/ //g' | while read Id Prenom Nom Mdp Role || [ -n "$Role" ];
 	do
-	sudo adduser $Prenom-$Nom
+	sudo echo "\n\n\n\n\n\o" |  adduser $Prenom-$Nom
 	echo "$Prenom-$Nom:$Mdp" | sudo chpasswd
 	sudo usermod -u $Id "$Prenom-$Nom"
 		if [[ "$Role" = *"$Admin"* ]]
