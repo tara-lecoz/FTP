@@ -18,10 +18,13 @@ apt-get update && apt-get upgrade
 #Cloner le dossier GIT afin de récupérer les fichiers de configuration
 git clone https://github.com/tara-lecoz/FTP.git
 
+#Se déplacer dans /etc afin de cloner le dossier FTP pour récupérer les fichiers .conf
+cd /etc
+
 #Récupérer les dossiers de configuration et les remplacer dans ceux installés
 mv /etc/FTP/proftpd.conf /etc/proftpd/proftpd.conf
 mv /etc/FTP/tls.conf /etc/proftpd/tls.conf
-mv /etc/FTP/modules.conf /etc/proftpd/
+mv /etc/FTP/modules.conf /etc/proftpd/modules.conf
 
 #Installer le paquet openssl
 sudo apt install openssl
